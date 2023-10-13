@@ -5,7 +5,9 @@ Add 2 numbers together
 
 
 def add_integer(a, b=98):
-    """_Adds a and b together
+    """Adds 2 numbers (a and b)
+    
+    Returns: The sum a and b as an integer
     """
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
