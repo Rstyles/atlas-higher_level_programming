@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """This Module contians the class Square
-   Size and position are used to print a square using the '#' character
+
+Returns:
+    _type_: Square
 """
 
-
 class Square:
-    """Defines a Square with a size and postion"""
+    """Defines a Square with a size and postion
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """Create a Square to print in the console
