@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""This Module contians the class Square
-
-Returns:
-    _type_: Square
-"""
+"""This Module contians the class Square"""
 
 
 class Square:
