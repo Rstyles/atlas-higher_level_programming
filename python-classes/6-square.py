@@ -5,9 +5,9 @@ Returns:
     _type_: Square
 """
 
+
 class Square:
-    """Defines a Square with a size and postion
-    """
+    """Defines a Square with a size and postion"""
 
     def __init__(self, size=0, position=(0, 0)):
         """Create a Square to print in the console
@@ -82,8 +82,7 @@ class Square:
         return self.__size**2
 
     def my_print(self):
-        """Prints the square offset by the position
-        """
+        """Prints the square offset by the position"""
         if self.__size == 0:
             print("")
         for i in range(self.__size):
