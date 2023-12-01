@@ -11,7 +11,7 @@ request(url, function (error, response, body) {
     const response = JSON.parse(body);
     let wedgeAntillesCount = 0;
     response.results.forEach(element => {
-      if (element.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+      if (element.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
         wedgeAntillesCount++;
       }
     });
