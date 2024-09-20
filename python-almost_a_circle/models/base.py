@@ -48,7 +48,7 @@ class Base:
             return "[]"  # if empty or missing, return empty list
 
     @classmethod
-    def save_to_file(cls, list_objs):
+    def save_to_file(self, list_objs):
         """
         This method writes the JSON string representation
         of list_objs to a file
@@ -59,11 +59,11 @@ class Base:
         Returns:
             None
         """
-        filename = cls.__name__ + ".json"  # filename is class name + .json
+        filename = self.__name__ + ".json"  # filename is class name + .json
         if list_objs is None or list_objs == []:  # if empty or None
             json_string = "[]"  # set JSON string to empty list
         else:  # if list_objs exists and is not empty
-            json_string = cls.to_json_string(  # get JSON string
+            json_string = self.to_json_string(  # get JSON string
                 [obj.to_dictionary() for obj in list_objs])
         with open(filename, "w") as f:  # open file in write mode
             f.write(json_string)  # write JSON string to file
