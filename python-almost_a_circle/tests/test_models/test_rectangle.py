@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.x, 6)
         self.assertEqual(rectangle.y, 8)
         self.assertEqual(rectangle.id, 1)
-    
+
     def test_attribute_cases(self):
         """
         Test attribute cases
@@ -102,7 +102,7 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 4)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             rectangle.display()
-            self.assertEqual(fake_out.getvalue(), 
+            self.assertEqual(fake_out.getvalue(),
                              "##\n##\n##\n##\n")
 
     def test_display_xy(self):
@@ -112,7 +112,7 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 4, 2, 2)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             rectangle.display()
-            self.assertEqual(fake_out.getvalue(), 
+            self.assertEqual(fake_out.getvalue(),
                              "\n\n  ##\n  ##\n  ##\n  ##\n")
 
     def test_to_dictionary(self):
@@ -120,7 +120,7 @@ class TestRectangle(unittest.TestCase):
         Test to_dictionary method
         """
         rectangle = Rectangle(2, 4, 6, 8, 1)
-        self.assertEqual(rectangle.to_dictionary(), 
+        self.assertEqual(rectangle.to_dictionary(),
                          {'x': 6, 'y': 8, 'id': 1, 'height': 4, 'width': 2})
 
     def test_update(self):
@@ -164,8 +164,8 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([rectangle])
         with open("Rectangle.json", "r") as file:
             self.assertEqual(len(file.read()), 53)
-    
-    def test_save_to_file_empty(self):
+
+    def test_save_to_file_with_empty_list(self):
         """
         Test save_to_file method with empty list
         """
