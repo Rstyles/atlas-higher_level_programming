@@ -169,7 +169,8 @@ class TestRectangle(unittest.TestCase):
         """
         Test save_to_file method with empty list
         """
-        Rectangle.save_to_file([])
+        r = Rectangle(1,1)
+        r.save_to_file([])
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
