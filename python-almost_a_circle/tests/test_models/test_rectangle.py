@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.x, 6)
         self.assertEqual(rectangle.y, 8)
         self.assertEqual(rectangle.id, 1)
-
+    
     def test_attribute_cases(self):
         """
         Test attribute cases
