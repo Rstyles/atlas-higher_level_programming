@@ -169,20 +169,21 @@ class TestRectangle(unittest.TestCase):
         """
         Test save_to_file method with empty list
         """
-        r = Rectangle(1,1)
-        r.save_to_file([])
+        rectangle = Rectangle(1,1)
+        rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_emptylist(self):
-        r = Rectangle(1,1)
-        self.assertEqual(r.save_to_file([]), None)
+        rectangle = Rectangle(1,1)
+        self.assertEqual(rectangle.save_to_file([]), None)
 
     def test_save_to_file_None(self):
         """
         Test save_to_file method with None
         """
-        Rectangle.save_to_file(None)
+        rectangle = Rectangle(1, 2)
+        rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
@@ -191,6 +192,6 @@ class TestRectangle(unittest.TestCase):
         Test load_from_file method
         """
         rectangle = Rectangle(1, 2)
-        Rectangle.save_to_file([rectangle])
+        rectangle.save_to_file([rectangle])
         rectangles = Rectangle.load_from_file()
         self.assertEqual(str(rectangle), str(rectangles[0]))
